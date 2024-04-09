@@ -1,0 +1,46 @@
+# Visual Studio Code directory
+.vscode/
+
+# Visual Studio files
+*.suo
+*.user
+*.sln.cache
+*.suo
+*.user
+*.sln.docstates
+
+# Rider files
+.idea/
+
+# Compiled output
+bin/
+obj/
+
+# NuGet packages
+*.nupkg
+*.paket
+*.paket.exe
+
+# User-specific files
+*.log
+*.swp
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.lock.json
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+*.bak
+*.bak.*
+*.log
+*.DS_Store
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
