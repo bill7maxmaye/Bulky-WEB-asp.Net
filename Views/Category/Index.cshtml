@@ -1,1 +1,42 @@
-<h1>biluushaaye</h1>
+@model List<BulkyWeb.Models.Category>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Categories</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS for hover effect */
+        tbody tr:hover {
+            background-color: #edbbbb;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>List of Categories</h1>
+    <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Display Order</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var category in Model.OrderBy(c => c.DisplayOrder))
+            {
+                <tr>
+                    <th scope="row">@category.Id</th>
+                    <td>@category.Name</td>
+                    <td>@category.DisplayOrder</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    @* <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> *@
+</body>
+</html>

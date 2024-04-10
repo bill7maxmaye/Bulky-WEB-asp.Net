@@ -18,7 +18,8 @@ namespace BulkyWeb.Data
             modelBuilder.Entity<Category>().HasData(
                 new Category {Id= 1, Name = "IPHOME", DisplayOrder =1},
                 new Category {Id =2, Name = "IPPHONE", DisplayOrder = 2 },
-                new Category {Id= 3 , Name = "laptop" ,  DisplayOrder=3}
+                new Category {Id= 3 , Name = "laptop" ,  DisplayOrder=3},
+                new Category {Id= 4, Name = "IPHOME-Etitit", DisplayOrder =3}
 
             );
         }
