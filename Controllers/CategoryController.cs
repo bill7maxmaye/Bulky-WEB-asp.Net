@@ -16,5 +16,9 @@ namespace BulkyWeb.Controllers{
             
            return View(RetrievedList); 
         }
+
+        public IActionResult Create(){
+            return View();
+        }
     }
 }
