@@ -12,12 +12,23 @@ namespace BulkyWeb.Controllers{
         public IActionResult Index(){
 
            List<Category> RetrievedList = _db.Categories.ToList();
-           Console.WriteLine("Retrieved List:");
+          
             
-           return View(RetrievedList); 
+           return  View(RetrievedList); 
         }
 
         public IActionResult Create(){
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Create (Category obj){
+
+            if (ModelState.IsValid){
+            _db.Categories.Add(obj);
+            _db.SaveChanges();
+
+            return RedirectToAction("Index", "Category");
+            }
             return View();
         }
     }
